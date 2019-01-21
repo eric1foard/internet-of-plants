@@ -3,8 +3,12 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.8.0"]
+  :dependencies [[org.clojure/clojure "1.10.0"]
                  [com.novemberain/langohr "5.1.0"]]
-  :main ^:skip-aot internet-of-plants.core
+  :main nil
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:publisher {:main internet-of-plants.publisher}
+             :subscriber {:main internet-of-plants.subscriber}
+             :uberjar {:aot :all}}
+  :aliases {"publisher" ["with-profile" "publisher" "run"]
+            "subscriber" ["with-profile" "subscriber" "run"]})

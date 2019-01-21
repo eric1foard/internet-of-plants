@@ -1,36 +1,20 @@
 # internet-of-plants
 
-FIXME: description
+A service using Clojure & RabbitMQ to write data about plant moisture levels into a timeseries database.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Clone this repo.
 
 ## Usage
 
-FIXME: explanation
+To start the RabbitMQ publisher:
+```
+lein publisher
+```
 
-    $ java -jar internet-of-plants-0.1.0-standalone.jar [args]
+To start the RabbitMQ subscriber:
+```
+lein subscriber
+```
 
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2019 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
