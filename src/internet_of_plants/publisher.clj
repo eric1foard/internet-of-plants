@@ -10,7 +10,8 @@
 
 (defn -main
   [& args]
-  (let [conn  (rmq/connect)
+  (Thread/sleep 10000)
+  (let [conn  (rmq/connect {:username "guest", :password "guest", :vhost "/", :host "rabbitmq", :port 5672})
         ch    (lch/open conn)
         qname "langohr.examples.hello-world"]
     (println (format "publisher Connected. Channel id: %d" (.getChannelNumber ch)))

@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [com.novemberain/langohr "5.1.0"]]
-  :main nil
+  ; :main nil
   :target-path "target/%s"
   :profiles {:publisher {:main internet-of-plants.publisher}
              :subscriber {:main internet-of-plants.subscriber}
